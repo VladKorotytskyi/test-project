@@ -8,10 +8,9 @@ fetch('https://restcountries.com/v3.1/all?fields=name,cca2')
     const select = document.getElementById('countrySelect');
 
     const allowed = [
-      "United States", "Canada", "United Kingdom",
+      "United States", "United Kingdom",
       "Germany", "France", "Italy", "Spain",
-      "Poland", "Ukraine", "China", "Japan",
-      "India", "Brazil", "Australia"
+      "Poland", "Ukraine"
     ];
 
     countriesData

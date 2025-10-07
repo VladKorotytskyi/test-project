@@ -8,26 +8,34 @@
     <link rel="stylesheet" href="src/css/style.css" />
     <link rel="stylesheet" href="src/css/reset.css" />
   </head>
-  <body>
-    <header>
-      <section class="container">
-        <img class="logo" src="src/img/logo.png" alt="Event Booster">
-        <h1 class="title">FIND BEST EVENTS <br> AROUND THE WORLD</h1>
-        <div class="hero-flex">
-          <form class="hero-form">
-          <input class="hero-input" type="text" placeholder="Start searching">
-          <button class="hero-btn"><img class="img-btn" src="./src/img/search-icon.png" alt="search icon"></button>
-        </form>
-        <!-- Вибір країн -->
-        <div class="dropdown">
-          <select id="countrySelect">
-            <option disabled selected>Choose country</option>
-          </select>
-        </div>
-        </div>
-      </section>
-    </header>
+<body>
+  <header>
+    <img class="logo" src="src/img/logo.png" alt="Event Booster">
+    <h1 class="title">FIND BEST EVENTS <br> AROUND THE WORLD</h1>
+    <div class="hero-flex">
+      <form class="hero-form" onsubmit="return false;">
+        <input class="hero-input" type="text" placeholder="Start searching">
+        <button class="hero-btn">
+          <img class="img-btn" src="src/img/search-icon.png" alt="search icon">
+        </button>
+      </form>
+      <select id="countrySelect">
+        <option value="">Choose country</option>
+        <option value="PL">Польща</option>
+        <option value="UA">Україна</option>
+        <option value="DE">Німечинна</option>
+        <option value="FR">Франція</option>
+        <option value="IT">Італія</option>
+        <option value="US">США</option>
+      </select>
+    </div>
+  </header>
 
-    <script type="module" src="./src/main.js"></script>
-  </body>
+  <main>
+    <section class="container">
+      <div id="eventsContainer" class="event-grid"></div>
+    </section>
+  </main>
+  <script src="./src/main.js" type="module"></script>
+</body>
 </html>

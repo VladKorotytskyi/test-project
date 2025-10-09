@@ -2,40 +2,67 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/concert.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Event Booster</title>
-    <link rel="stylesheet" href="src/css/style.css" />
     <link rel="stylesheet" href="src/css/reset.css" />
+    <link rel="stylesheet" href="src/css/style.css" />
   </head>
-<body>
-  <header>
-    <img class="logo" src="src/img/logo.png" alt="Event Booster">
-    <h1 class="title">FIND BEST EVENTS <br> AROUND THE WORLD</h1>
-    <div class="hero-flex">
-      <form class="hero-form" onsubmit="return false;">
-        <input class="hero-input" type="text" placeholder="Start searching">
-        <button class="hero-btn">
-          <img class="img-btn" src="src/img/search-icon.png" alt="search icon">
-        </button>
-      </form>
-      <select id="countrySelect">
-        <option value="">Choose country</option>
-        <option value="PL">Польща</option>
-        <option value="UA">Україна</option>
-        <option value="DE">Німечинна</option>
-        <option value="FR">Франція</option>
-        <option value="IT">Італія</option>
-        <option value="US">США</option>
-      </select>
-    </div>
-  </header>
+  <body>
+    <header>
+      <img class="logo" src="src/img/logo.png" alt="Event Booster" />
+      <h1 class="title">
+        FIND BEST EVENTS <br />
+        AROUND THE WORLD
+      </h1>
+      <div class="hero-flex">
+        <form class="hero-form" onsubmit="return false;">
+          <input class="hero-input" type="text" placeholder="Start searching" />
+          <button class="hero-btn" type="submit">
+            <img
+              class="img-btn"
+              src="src/img/search-icon.png"
+              alt="search icon"
+            />
+          </button>
+        </form>
+        <select id="countrySelect">
+          <option value="">Choose country</option>
+          <option value="PL">Poland</option>
+          <option value="UA">Ukraine</option>
+          <option value="DE">Germany</option>
+          <option value="FR">France</option>
+          <option value="IT">Italy</option>
+          <option value="US">USA</option>
+        </select>
+      </div>
+    </header>
 
-  <main>
-    <section class="container">
-      <div id="eventsContainer" class="event-grid"></div>
-    </section>
-  </main>
-  <script src="./src/main.js" type="module"></script>
-</body>
+    <main>
+      <section class="container">
+        <div id="eventsContainer" class="event-grid"></div>
+      </section>
+    </main>
+
+    <!-- Modal -->
+    <div id="eventModal" class="modal">
+      <div class="modal-content">
+        <img class="modal-close" src="./src/img/close.png" alt="close" />
+        <img id="modalImage" src="#" alt="Event image" />
+        <div class="modal-text">
+          <h2 id="modalTitle"></h2>
+          <p><strong>INFO</strong> <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo suscipit veritatis, nostrum quod tempora incidunt tenetur excepturi aliquam consequatur neque accusantium sequi, perferendis praesentium veniam! Consequatur ex assumenda harum cumque.</span></p>
+          <p><strong>WHEN</strong> <span id="modalDate"></span></p>
+          <p><strong>WHERE</strong> <span id="modalCity"></span></p>
+          <p><strong>WHO</strong> <span id="modalVenue"></span></p>
+          <p><strong>PRICE</strong> <span id="modalPrice"></span></p>
+          <a id="modalLink" href="#" class="buy-btn"
+            >Buy Ticket</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <script src="./src/main.js" type="module"></script>
+  </body>
 </html>

@@ -99,7 +99,7 @@ header {
 
 .event-card img {
   width: 100%;
-  height: 220px;
+  height: 250px;
   object-fit: cover;
   border-top-left-radius: 40px;
   border-bottom-right-radius: 40px;
@@ -129,30 +129,42 @@ header {
   position: fixed;
   z-index: 1000;
   inset: 0;
-  left: 0;
-  top: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0,0,0,0.7);
   justify-content: center;
   align-items: center;
 }
 
+.modal[style*="display: flex"] {
+  animation: modalFadeIn 300ms ease forwards;
+}
+
 .modal-content {
-  background-color: white;
-  border-radius: 12px;
+  background-color: #fff;
   padding: 20px;
   display: flex;
   gap: 20px;
   max-width: 700px;
   width: 90%;
   position: relative;
+  border-radius: 200px 0;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
 }
 
-.modal-content img {
-  max-width: 40%;
-  border-radius: 8px;
+.modal[style*="display: flex"] .modal-content {
+  animation: contentIn 300ms ease forwards;
+}
+
+#modalImage {
+  width: 250px;
+  height: 450px;
+  margin-top: 60px;
+  margin-bottom: 30px;
+  margin-left: 50px;
+  border-radius: 20px;
   object-fit: cover;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
 }
 
 .modal-content h2,
@@ -170,28 +182,64 @@ header {
 
 .modal-content p {
   font-size: 14px;
-  color: black
+  color: #333;
+  line-height: 1.4;
 }
 
 .buy-btn {
   display: inline-block;
   margin-top: 10px;
   padding: 8px 16px;
-  border-radius: 5px;
-  background-color: #4C00FE;
+  border-radius: 6px;
+  background-color: #4c00fe;
   color: #fff;
   text-decoration: none;
   font-size: 14px;
+  transition: background 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.buy-btn:hover {
+  background-color: #3700c9;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(76,0,254,0.4);
 }
 
 .modal-close {
   position: absolute;
-  top: 10px;
-  right: 14px;
+  top: 14px;
+  right: 18px;
   font-size: 22px;
   cursor: pointer;
   color: #fff;
+  border-radius: 8px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
 }
-strong{
+
+.modal-close:hover {
+  transform: scale(1.1);
+  opacity: 0.85;
+}
+
+strong {
   color: #dc56c5;
+}
+
+.modal-text {
+  margin-top: 50px;
+}
+
+.modal-flex-text {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== Keyframes ===== */
+@keyframes modalFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes contentIn {
+  from { transform: translateY(40px) scale(0.95); opacity: 0; }
+  to   { transform: translateY(0) scale(1);       opacity: 1; }
 }

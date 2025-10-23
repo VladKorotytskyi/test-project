@@ -21,9 +21,7 @@ const refs = {
 let state = { page: 1, country: "", keyword: "", pager: null };
 
 function itemsPerPage() {
-  if (window.innerWidth < 480) return 12;
-  if (window.innerWidth < 900) return 16;
-  return 24;
+  return 20;
 }
 
 function showMessage(text) {

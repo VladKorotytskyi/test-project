@@ -123,7 +123,6 @@ header {
   font-size: 18px;
   color: #aaa;
 }
-/* ===== Modal ===== */
 .modal {
   display: none;
   position: fixed;
@@ -233,7 +232,6 @@ strong {
   flex-direction: column;
 }
 
-/* ===== Keyframes ===== */
 @keyframes modalFadeIn {
   from {
     opacity: 0;
@@ -261,4 +259,182 @@ footer {
   font-weight: 400;
   font-size: 16px;
   text-align: center;
+}
+/* Pagination */
+.tui-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+  margin: 30px 0;
+}
+
+.tui-pagination .tui-page-btn {
+  border: none !important;
+  padding: 8px 14px;
+  border-radius: 10px 0;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.tui-pagination .tui-first,
+.tui-pagination .tui-last,
+.tui-pagination .tui-prev,
+.tui-pagination .tui-next {
+  display: none !important;
+}
+
+@media (max-width: 767px){
+  .title {
+    font-size: 32px;
+    margin-bottom: 20px;
+    margin-top: 150px;
+  }
+  .hero-flex {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .hero-input,
+  #countrySelect {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .event-grid {
+    padding: 20px 12px;
+    gap: 16px;
+  }
+
+  .event-card {
+    max-width: 100%;
+  }
+
+  .event-card img {
+    height: 180px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+
+  .modal-content {
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+    border-radius: 20px;
+  }
+
+  #modalImage {
+    width: 100%;
+    height: auto;
+    margin: 0 0 20px;
+  }
+
+  .modal-text {
+    margin-top: 0;
+  }
+
+  .footer-text {
+    font-size: 14px;
+    padding: 12px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  body {
+    font-size: 16px;
+  }
+
+  header {
+    padding: 30px 20px 140px;
+  }
+
+  .logo {
+    width: 180px;
+  }
+
+  .title {
+    font-size: 40px;
+    margin-top: 120px;
+    margin-bottom: 30px;
+  }
+
+  .hero-flex {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .hero-input,
+  #countrySelect {
+    width: 320px;
+    height: 44px;
+    font-size: 15px;
+  }
+
+  .event-grid {
+    gap: 20px;
+    padding: 30px 16px;
+  }
+
+  .event-card {
+    max-width: calc(50% - 20px);
+    padding: 16px;
+  }
+
+  .event-card img {
+    height: 220px;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+
+  .event-card h3 {
+    font-size: 17px;
+  }
+
+  .event-card p {
+    font-size: 13px;
+  }
+
+  .modal-content {
+    flex-direction: row;
+    align-items: flex-start;
+    max-width: 90%;
+    padding: 20px;
+    border-radius: 40px;
+    gap: 20px;
+  }
+
+  #modalImage {
+    width: 200px;
+    height: auto;
+    margin: 0;
+    border-radius: 20px;
+  }
+
+  .modal-flex-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .modal-content h2 {
+    font-size: 20px;
+  }
+
+  .modal-content p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .buy-btn {
+    font-size: 14px;
+    padding: 8px 14px;
+  }
+
+  .footer-text {
+    font-size: 15px;
+    padding: 16px;
+  }
 }

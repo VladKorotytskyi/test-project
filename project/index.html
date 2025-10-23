@@ -7,6 +7,11 @@
     <title>Event Booster</title>
     <link rel="stylesheet" href="src/css/reset.css" />
     <link rel="stylesheet" href="src/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://uicdn.toast.com/tui.pagination/latest/tui-pagination.css"
+    />
+    <script src="https://uicdn.toast.com/tui.pagination/latest/tui-pagination.js"></script>
   </head>
   <body>
     <header>
@@ -19,11 +24,7 @@
         <form class="hero-form" onsubmit="return false;">
           <input class="hero-input" type="text" placeholder="Start searching" />
           <button class="hero-btn" type="submit">
-            <img
-              class="img-btn"
-              src="src/img/search-icon.png"
-              alt="search icon"
-            />
+            <img class="img-btn" src="src/img/search-icon.png" alt="search icon" />
           </button>
         </form>
         <select id="countrySelect">
@@ -41,14 +42,16 @@
     <main>
       <section class="container">
         <div id="eventsContainer" class="event-grid"></div>
+        <div id="pagination" class="tui-pagination"></div>
       </section>
     </main>
+
     <footer>
       <div class="container">
-        <div class="footer-flex">
-          <p class="footer-text">© 2021 | All Rights Reserved | Developed with ♥ by GoIT Students</p>
-        </div>        
-      </div>  
+        <p class="footer-text">
+          © 2021 | All Rights Reserved | Developed with ♥ by GoIT Students
+        </p>
+      </div>
     </footer>
 
     <!-- Modal -->
@@ -58,14 +61,11 @@
         <img id="modalImage" src="#" alt="Event image" />
         <div class="modal-text">
           <h2 id="modalTitle"></h2>
-          <p class="modal-flex-text"><strong>INFO</strong> <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo suscipit veritatis, nostrum quod tempora incidunt tenetur excepturi aliquam consequatur neque accusantium sequi, perferendis praesentium veniam! Consequatur ex assumenda harum cumque.</span></p>
           <p class="modal-flex-text"><strong>WHEN</strong> <span id="modalDate"></span></p>
           <p class="modal-flex-text"><strong>WHERE</strong> <span id="modalCity"></span></p>
           <p class="modal-flex-text"><strong>WHO</strong> <span id="modalVenue"></span></p>
           <p class="modal-flex-text"><strong>PRICE</strong> <span id="modalPrice"></span></p>
-          <a id="modalLink" href="#" class="buy-btn"
-            >Buy Ticket</a
-          >
+          <a id="modalLink" href="#" class="buy-btn">Buy Ticket</a>
         </div>
       </div>
     </div>
